@@ -9,10 +9,11 @@
 			"nonFreePackages": "true"
 		},
 		"ghcr.io/devcontainers/features/powershell:1": {
-			"modules": "Terminal-Icons,Az"
+			"modules": "Terminal-Icons,Az",
+			"powershellProfileURL": ""
 		}
 	},
-	"postCreateCommand": "sudo chsh vscode -s \"$(which pwsh)\"",
+	"postCreateCommand": "curl -s https://ohmyposh.dev/install.sh | bash -s && pwsh",
 	"customizations": {
 		"vscode": {
 			"settings": {

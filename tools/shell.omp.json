@@ -1,0 +1,97 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "analogue1": "#87abe0",
+    "analogue2": "#87e0bc",
+    "complementary": "#e09087",
+    "primary": "#b4e7ec",
+    "triadic1": "#9087e0",
+    "triadic2": "#e087d7"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "style": "plain",
+          "template": "\ue606 {{ .Venv }} ",
+          "foreground": "p:complementary",
+          "type": "python"
+        },
+        {
+          "style": "plain",
+          "template": "\udb80\udc04 {{ .UserName }}",
+          "foreground": "p:primary",
+          "type": "session"
+        },
+        {
+          "style": "plain",
+          "template": "<p:primary>\uf460 </>",
+          "foreground": "p:analogue2",
+          "type": "text"
+        },
+        {
+          "properties": {
+            "folder_icon": "\uea83",
+            "folder_separator_icon": " \uf460 ",
+            "home_icon": "\ueb06",
+            "mapped_locations": {
+              "C:\\": "\uf0a0",
+              "D:\\": "\uf0a0"
+            },
+            "max_depth": 1,
+            "style": "agnoster_short"
+          },
+          "style": "plain",
+          "template": "{{ .Path }}",
+          "foreground": "p:analogue2",
+          "type": "path"
+        },
+        {
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": "<p:primary> \uf460</> {{ .HEAD }} {{ .UpstreamIcon }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}",
+          "foreground": "p:triadic1",
+          "type": "git"
+        },
+        {
+          "style": "plain",
+          "template": "<p:primary> \uf460</> \uebd8 {{ .Name }} ",
+          "foreground": "p:analogue1",
+          "type": "az"
+        },
+        {
+          "style": "plain",
+          "template": "{{ if .ID }}[{{ .ID }}]{{ end }}",
+          "foreground": "p:analogue1",
+          "type": "az"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "style": "plain",
+          "template": " \ue3bf ",
+          "foreground": "p:complementary",
+          "type": "root"
+        },
+        {
+          "style": "plain",
+          "template": " \uf105 ",
+          "foreground": "p:primary",
+          "type": "text"
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 3
+}
