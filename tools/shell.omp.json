@@ -27,7 +27,7 @@
         },
         {
           "style": "plain",
-          "template": "<p:primary>\uf460 </>",
+          "template": "<p:primary> \uf460 </>",
           "foreground": "p:analogue2",
           "type": "text"
         },
