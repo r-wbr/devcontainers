@@ -1,0 +1,12 @@
+{
+    "id": "pwsh-Azure",
+    "version": "1.0.0",
+    "name": "Powershell-Azure",
+    "description": "PowerShell with installed tools for Microsoft Azure.",
+    "documentationURL": "",
+    "publisher": "",
+    "licenseURL": "",
+    "platforms": [
+        "PowerShell"
+    ]
+}

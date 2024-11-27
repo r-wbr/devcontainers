@@ -1,0 +1,12 @@
+{
+    "id": "pwsh-MsGraph",
+    "version": "1.0.0",
+    "name": "Powershell-MsGraph",
+    "description": "PowerShell with installed tools for Microsoft Graph.",
+    "documentationURL": "",
+    "publisher": "",
+    "licenseURL": "",
+    "platforms": [
+        "PowerShell"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+	"name": "pwsh-Azure",
+	"image": "mcr.microsoft.com/powershell:lts-debian-11",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"username": "vscode",
+			"upgradePackages": "false",
+			"nonFreePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/powershell:1": {
+			"modules": "Terminal-Icons,Az"
+		}
+	},
+	"postCreateCommand": "sudo chsh vscode -s \"$(which pwsh)\"",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "pwsh"
+			},
+			"extensions": [
+				"ms-vscode.powershell",
+				"ms-vsliveshare.vsliveshare",
+				"ms-vscode.vscode-node-azure-pack",
+				"azure-automation.vscode-azureautomation"
+			]
+		}
+	},
+	"forwardPorts": [
+		3000
+	]
+}
