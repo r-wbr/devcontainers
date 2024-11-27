@@ -10,7 +10,7 @@
 		},
 		"ghcr.io/devcontainers/features/powershell:1": {
 			"modules": "Terminal-Icons,Az",
-			"powershellProfileURL": "https://raw.githubusercontent.com/r-wbr/devcontainers/refs/heads/main/tools/pwshProfile.ps1"
+			"powershellProfileURL": "https://raw.githubusercontent.com/r-wbr/devcontainers/refs/heads/main/tools/profile.ps1"
 		}
 	},
 	"postCreateCommand": "curl -s https://ohmyposh.dev/install.sh | bash -s && sudo chsh vscode -s \"$(which pwsh)\"",
