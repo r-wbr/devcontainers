@@ -13,7 +13,7 @@
 			"powershellProfileURL": "https://raw.githubusercontent.com/r-wbr/devcontainers/refs/heads/main/tools/pwshProfile.ps1"
 		}
 	},
-	"postCreateCommand": "curl -s https://ohmyposh.dev/install.sh | bash -s && pwsh",
+	"postCreateCommand": "curl -s https://ohmyposh.dev/install.sh | bash -s && sudo chsh vscode -s \"$(which pwsh)\"",
 	"customizations": {
 		"vscode": {
 			"settings": {
