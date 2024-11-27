@@ -85,7 +85,7 @@
         },
         {
           "style": "plain",
-          "template": " \uf105 ",
+          "template": " \uf460 ",
           "foreground": "p:primary",
           "type": "text"
         }
