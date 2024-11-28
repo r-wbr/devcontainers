@@ -1,0 +1,35 @@
+{
+	"name": "pwsh-Azure",
+	"image": "mcr.microsoft.com/powershell:lts-debian-11",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"username": "vscode",
+			"upgradePackages": "false",
+			"nonFreePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/powershell:1": {
+			"modules": "Terminal-Icons,Az",
+			"powershellProfileURL": "https://raw.githubusercontent.com/r-wbr/devcontainers/refs/heads/main/tools/profile.ps1"
+		}
+	},
+	"postCreateCommand": "curl -s https://ohmyposh.dev/install.sh | bash -s && sudo chsh vscode -s \"$(which pwsh)\"",
+	"postStartCommand": "curl -Lo bicep https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64 && chmod +x ./bicep && sudo mv ./bicep /usr/local/bin/bicep ",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "pwsh"
+			},
+			"extensions": [
+				"ms-vscode.powershell",
+				"ms-vsliveshare.vsliveshare",
+				"ms-vscode.vscode-node-azure-pack",
+				"azure-automation.vscode-azureautomation",
+				"ms-azuretools.vscode-bicep"
+			]
+		}
+	},
+	"forwardPorts": [
+		3000
+	]
+}

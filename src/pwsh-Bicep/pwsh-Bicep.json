@@ -1,0 +1,12 @@
+{
+    "id": "pwsh-Bicep",
+    "version": "1.0.0",
+    "name": "Powershell-Bicep",
+    "description": "PowerShell with installed tools for Microsoft Azure and Bicep Templates.",
+    "documentationURL": "",
+    "publisher": "",
+    "licenseURL": "",
+    "platforms": [
+        "PowerShell"
+    ]
+}
